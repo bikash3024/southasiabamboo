@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+        <title>World Bamboo Day Museum</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+        <link  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+        <link rel=stylesheet type="text/css" href="RM_buttom.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+        <!-- Favicon  -->
+       <link rel="shortcut icon" href="img/logo-image.jpg">
+    
+        <!-- Style CSS -->
+      <link rel="stylesheet" href="style.css">
+</head>
+<script>
+
+  window.onload = function () {
+      $(".load").fadeOut(2500);
+  };
+</script>
+<style>
+html,
+body,
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #262626;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+.wbd {  
+  position: relative;
+  left: 5%;  
+  width: 180px;
+  height: auto;
+
+}
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background:#262626;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.title {
+  position: absolute;
+  -webkit-perspective: 600;
+          perspective: 600;
+  top:1%;
+  padding-left: 2%;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.title:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 85%;
+  width: 6px;
+  background: #0e8d02;
+  top: 8%;
+  left: 0;
+  opacity: 0;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-animation: title-border-slide-in 0.5s ease-out forwards;
+          animation: title-border-slide-in 0.5s ease-out forwards;
+}
+.title .title-word {
+  opacity: 0;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+.title .title-word:nth-child(1) {
+  -webkit-animation: roll-in 0.3s 0s ease-out forwards;
+          animation: roll-in 0.3s 0s ease-out forwards;
+}
+.title .title-word:nth-child(2) {
+  -webkit-animation: roll-in 0.3s 0.175s ease-out forwards;
+          animation: roll-in 0.15s 0.175s ease-out forwards;
+}
+.title .title-word:nth-child(3) {
+  -webkit-animation: roll-in 0.15s 0.35s ease-out forwards;
+          animation: roll-in 0.15s 0.35s ease-out forwards;
+}
+.title .title-word:nth-child(4) {
+  -webkit-animation: roll-in 0.15s 0.525s ease-out forwards;
+          animation: roll-in 0.15s 0.5s ease-out forwards;
+}
+@-webkit-keyframes title-border-slide-in {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes title-border-slide-in {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes roll-in {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.timeline {
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 0%;
+}
+.timeline .swiper-container {
+  height: 700px;
+  width: 100%;
+
+  position: relative;
+}
+.timeline .swiper-wrapper {
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+  transition: 0.5s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+.timeline .swiper-slide {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.timeline .swiper-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -115%;
+  bottom: -10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: -230px 0 150px 80vw rgba(0, 0, 1, 0.883);
+  border-radius: 100%;
+}
+.timeline .swiper-slide-content {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  max-width: 310px;
+  /* right: 80%; */
+  top: 13%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  /* font-size: 12px; */
+  z-index: 2;
+}
+.timeline .swiper-slide .timeline-year {
+  display: block;
+  font-style: italic;
+  font-size: 48px;
+  margin-bottom: 50px;
+  margin-left: -20px;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  color: #d4a024;
+  font-weight: 500;
+  opacity: 0;
+  -webkit-transition: 0.2s ease 0.4s;
+  transition: 0.2s ease 0.4s;
+}
+.timeline .swiper-slide .timeline-title {
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0 0 30px;
+  opacity: 0;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  -webkit-transition: 0.2s ease 0.3s;
+  transition: 0.2s ease 0.3s;
+}
+.timeline .swiper-slide .timeline-text {
+  line-height: 1.5;
+  opacity: 0;
+  color:#fff;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  -webkit-transition: 0.2s ease 0.3s;
+  transition: 0.2s ease 0.3s;
+}
+.timeline .swiper-slide-active .timeline-year {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.4s ease 1s;
+  transition: 0.4s ease 1s;
+}
+.timeline .swiper-slide-active .timeline-title {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.4s ease 1s;
+  transition: 0.4s ease 1s;
+}
+.timeline .swiper-slide-active .timeline-text {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.4s ease 1s;
+  transition: 0.4s ease 1s;
+}
+.timeline .swiper-pagination {
+  right: 10% !important;
+  height: 100%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 25px;
+  z-index: 1;
+}
+.timeline .swiper-pagination::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.411);
+}
+.timeline .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  text-align: center;
+  opacity: 1;
+  background:scroll;
+  color: #eba910;
+  margin: 15px 0 !important;
+  position: relative;
+}
+.timeline .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -32.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 10 0%;
+  background-color: #e7a919;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.timeline .swiper-pagination-bullet-active {
+  color: #adec5a;
+}
+.timeline .swiper-pagination-bullet-active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.timeline .swiper-button-next,
+.timeline .swiper-button-prev {
+  background-size: 30px 30px;
+  top: 10%;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.timeline .swiper-button-prev {
+  left: 8%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+}
+.timeline .swiper-button-prev:hover {
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
+}
+.timeline .swiper-button-next {
+  right: 8%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+}
+.timeline .swiper-button-next:hover {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+@media screen and (min-width: 768px) {
+  .timeline .swiper-slide::after {
+    right: -30%;
+    bottom: -8%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+  }
+  .timeline .swiper-slide-content {
+    right: 30%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 310px;
+    font-size: 11px;
+    text-align: right;
+  }
+  .timeline .swiper-slide .timeline-year {
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+  .timeline .swiper-slide .timeline-title {
+    font-size: 50px;
+    margin: 0;
+  }
+  .timeline .swiper-pagination {
+    display: -webkit-box;
+    display: flex;
+  }
+  .timeline .swiper-button-prev {
+    top: 8%;
+    left: auto;
+    right: 15%;
+    -webkit-transform: rotate(90deg) translate(0, 10px);
+            transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-prev:hover {
+    -webkit-transform: rotate(90deg) translate(-3px, 10px);
+            transform: rotate(90deg) translate(-3px, 10px);
+  }
+  .timeline .swiper-button-next {
+    top: auto;
+    bottom: 8%;
+    right: 15%;
+    -webkit-transform: rotate(90deg) translate(0, 10px);
+            transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-next:hover {
+    -webkit-transform: rotate(90deg) translate(3px, 10px);
+            transform: rotate(90deg) translate(3px, 10px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .timeline .swiper-slide::after {
+    right: -20%;
+    bottom: -12%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 35vw rgba(0, 0, 0, 0.589);
+  }
+  .timeline .swiper-slide-content {
+    right: 25%;
+  }
+}
+  /* Loading */
+  .load {
+        position: fixed;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+    }
+    .boxLoading {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+}
+.boxLoading:before {
+        content: '';
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.5s linear infinite;
+}
+.boxLoading:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: #1A6844;
+        animation: animate 0.5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px; 
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+/* Loading */
+
+</style>
+<body>
+
+  <div class="load">
+    <div class="boxLoading">
+        </div>
+    </div>
+
+        <div class="mainMenu d-flex align-items-center justify-content-between">
+          <!-- Close Icon -->
+          <div class="closeIcon">
+            <i class="ti-close" aria-hidden="true"></i>
+          </div>
+          <!-- Logo Area -->
+        
+          <!-- Nav -->
+        </div>
+          <header class="header-area">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="menu-area d-flex justify-content-between">
+                  <!-- Logo Area  -->
+                  <!-- <div class="logo-area">
+                    <a href="index.html">World Bamboo Day</a>
+                  </div> -->
+                  <div class="wbd">
+                   <a href= "index.html"><img  src = "https://i.imgur.com/7ieYIzT.png"></a>
+                    </div>
+                  <div class="menu-content-area d-flex align-items-center">
+                    <!-- Header Social Area -->
+                    <div class="header-social-area d-flex align-items-center">
+                      <!-- <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                      <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
+                      <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Menu Icon -->
+                    <span class="navbar-toggler-icon" id="menuIcon"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ***** Header Area End ***** -->
+          <!-- ***** Main Menu Area Start ***** -->
+          <div class="mainMenu d-flex align-items-center justify-content-between">
+            <!-- Close Icon -->
+            <div class="closeIcon">
+              <i class="ti-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo Area -->
+            <div class="logo-area">
+              <a href="index.html">Index</a>
+            </div>
+            <!-- Nav -->
+            <div class="sonarNav">
+              <nav>
+                <ul>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="main.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="bamboo_classify.html">Bamboo Species</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./wbd/WBD.html">World Bamboo Day</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="video.html">Video</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="elements.html">Elements</a>
+                  </li> -->
+                </ul>
+              </nav>
+            </div>
+            <!-- Copwrite Text -->
+            
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+            </div>
+      <br/><br/><br/><br/><br/><br/>
+
+        <!-- <h1  class="title">World Bamboo Day</h1> -->
+        <div class="timeline">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"  style="background-image: url(https://i.imgur.com/PTipt5L.jpg)" data-year="Origin">
+                  <div class="swiper-slide-content"><span class="timeline-year" front style="font-size:55px;">Origin</span>
+                    <!-- <h1 class="Origin">Our nice super title</h1> -->
+                    <h4 class="timeline-text" >World Bamboo Day was initiated by Mr. Kamesh Salam, former president of World Bamboo Organization, during the 8th World Bamboo Congress held in Bangkok (Thaïland) in 2009.</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide" style="background-position: 0px -250px; background-image: url(https://i.imgur.com/RSggSrd.jpg)"data-year="India">
+                <div class="swiper-slide-content"><span class="timeline-year" front style="font-size:55px;">India</span>
+                  <h1 class="timeline-text" front style="font-size:25px; color: #e7a919; font-style: italic;" >Imphal</h1> 
+                  <h4 class="timeline-text">Mr. Kamesh Salam</h4> 
+                  
+                  <div class="panel bw" onclick="location.href='./wbd/India_photo.html'">
+                      <button>Read more</button>
+                     </div>  
+                  </div>
+              </div>
+            
+              <div class="swiper-slide" style="background-image: url(https://i.imgur.com/FLlcRNH.jpg)" data-year="Buthan">
+                <div class="swiper-slide-content"><span class="timeline-year" front style="font-size:55px;">Buthan</span>
+                  <!-- <h4 class="timeline-title">Our nice super title</h4> -->
+                  <!-- <p class="timeline-text"></p> -->
+                  <br>
+                  <div class="panel bw" onclick="location.href='./wbd/Buthan_photo.html'">
+                        <button>Read more</button>
+                   </div>  
+                </div>
+              </div>
+                          
+                <div class="swiper-slide" style="background-image: url(https://i.imgur.com/QoqgH8o.jpg)" data-year="Bangladesh">
+                  <div class="swiper-slide-content"><span class="timeline-year">Bangladesh</span>
+                   
+                   <h1 class="timeline-text" front style="font-size:25px; color: #e7a919; font-style: italic;" >Faridpur</h1>
+                   
+                       <h4 class="timeline-text">Demonstration of improved method for Bamboo Cultivation Using Co-Compost.</h4>
+                    
+                    <div class="panel bw" onclick="location.href='./wbd/Bangladesh_photo.html'">
+                      <button>Read more</button>
+                         </div>  
+                  </div>
+              </div>
+
+              <div class="swiper-slide" style="background-image: url(https://i.imgur.com/3VddDDa.jpg)" data-year="Philippines">
+                <div class="swiper-slide-content"><span class="timeline-year">Philippines</span>
+                 
+                 <h1 class="timeline-text" front style="font-size:25px; color: #e7a919; font-style: italic;" >Pangasinan</h1>
+                 
+                     <h4 class="timeline-text">Demonstration of improved method for Bamboo Cultivation Using Co-Compost.</h4>
+                  
+                  <div class="panel bw" onclick="location.href=  './wbd/Philippines_photo.html'"  >
+                    <button>Read more</button>
+                       </div>  
+                </div>
+            </div>
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+</body>
+<!-- (title) -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="js/plugins.js"></script>
+<!-- Active js -->
+<script src="js/active.js"></script>
+
+
+<!-- <script src=""></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+<script >
+        var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+  direction: 'vertical',
+  loop: false,
+  speed: 1000,
+  pagination: '.swiper-pagination',
+  paginationBulletRender: function (swiper, index, className) {
+    var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+    return '<span class="' + className + '">' + year + '</span>';
+  },
+  paginationClickable: true,
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+     breakpoints: {
+        768: {
+        direction: 'horizontal',
+      }
+  }
+});
+</script>
+</html>

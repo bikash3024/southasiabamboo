@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+
+
+#word {
+  display: flex;
+  position: absolute;
+  left: 35%;
+  top: 0;
+  min-height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+text-transform: Uppercase;
+margin-bottom: .5em;
+font-family: 'Rubik', sans-serif;
+font-size: 7rem;
+color: #E4E5E6; }
+
+h1 {
+position: relative;
+background: linear-gradient(to right, #92FFC0, #002661);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; }
+
+h1:before,
+h1:after {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0; }
+
+h1:before {
+z-index: -1;
+text-shadow: -0.009em -0.009em 5px rgba(0,0,0,0.1)}
+
+h1:after {
+z-index: -2;
+text-shadow: 8px 8px 12px rgba(0,0,0,0.8), 15px 15px 20px rgba(0,0,0,.6), 25px 35px 30px rgba(0,0,0,.9);
+mix-blend-mode: multiply; }
+
+
+h2 spam {
+  font-size: 0.8em; 
+}

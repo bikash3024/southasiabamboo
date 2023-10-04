@@ -1,0 +1,112 @@
+<head>
+	<meta charset="UTF-8">
+	<title>South Asia Bamboo Foundation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/logo-image.jpg" type="image/x-icon" />
+	
+	<meta property="og:title" content="South Asia Bamboo Foundation" >
+	<link href="img/logo-image.jpg" rel="image_src" type="image/jpeg">
+	<meta property="og:image:height" content="1024">
+    <meta property="og:image:width" content="1024">
+	<meta property="og:image" content="https://www.ec.ccu.edu.tw/ec/images/sabf-logo-300x300.jpg">	
+	<script src="vendor/jquery/jquery.min.js"></script>
+</head>
+
+
+<style type="text/css">
+
+
+<!--圖片拖拉-->
+
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.picture {
+  width: 600px;
+  
+  overflow: hidden;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.detail {
+  padding: 25px 20px;
+  font-weight: 600;
+  text-align: center;
+  
+  h3 {
+    margin: 0;
+    font-size: 30px;
+  }
+  
+  span {
+    display: block;
+    font-size: 1.5vw;
+    color: #f44336;
+  }
+}
+
+</style>
+<div id="loadmenu">
+</div>
+<section class="section">
+<div class="p-3 mb-2 bg-success text-white" >
+  
+	<h3> 2020 Taiwan-India / Global Bamboo-Tech Forum</h3>
+	
+</div>
+<div class="row">
+		<div class="swiper-container" style="width:100%;overflow:auto;"> 
+			<div class="swiper-wrapper" style="margin-left:40px;margin-top:30px;">   				
+				<div class="swiper-slide">
+					<div class="picture">
+						<iframe  src="https://www.youtube.com/embed/u6MExcdEXo0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="detail">
+						<h3></h3>
+						<span>Webinar Topics: Bamboo: a potential resource for the uplifting rural economy in post-COVID pandemic situation; in NE India.</span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="picture">
+						<iframe  src="https://www.youtube.com/embed/d2cgaVppjcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="detail">
+						<h3></h3>
+						<span>Global Bamboo and Livelihood in a COVID-19 World</span>
+					</div>
+				</div>
+					
+				
+				
+			</div>    
+		</div>		
+	</div>
+	
+	
+</section>
+<div id="loadfooter">
+ </div>
+  <script>
+  
+  
+$(document).ready(function(){
+ $('#loadmenu').load('menu.html');	
+})
+$(document).ready(function(){
+ $('#loadfooter').load('footer.html');	
+})
+
+</script>

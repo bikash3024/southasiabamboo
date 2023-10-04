@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>World Bamboo Day Museum-Bamboo Species</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- Style CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Icon -->
+	<link rel="icon" href="img/logo-image.jpg">
+	
+</head>
+<script>
+
+    window.onload = function () {
+        $(".load").fadeOut(2500);
+    };
+</script>
+<style>
+        body{
+            background-color:rgb(2, 158, 70);
+			background: url("https://i.imgur.com/QAT66e0.jpg");/* no-repeat center center fixed;  */
+			/* background-size: cover; */
+			background-position:-300px 1200px;
+        }
+		.square-flip{
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
+
+		-webkit-transform: perspective(1000px);
+		-moz-transform: perspective(1000px);
+		-ms-transform: perspective(1000px);
+		transform: perspective(1000px);
+
+		-webkit-transform-style: preserve-3d; 
+		-moz-transform-style: preserve-3d; 
+		-ms-transform-style: preserve-3d; 
+		transform-style: preserve-3d; 
+
+		/*border:1px solid #efefef;*/
+		
+		position:relative;
+		float:left;
+		margin:20px;
+
+		}
+		.square-flip{
+			width:400px;
+			height:400px;
+		}
+		.square,.square2{
+			width:100%;
+			height:100%;
+		}
+		.square{
+
+			background-size: cover;
+			background-position:center center;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			overflow: hidden;
+
+			position:absolute;
+			top:0;
+
+
+			-webkit-backface-visibility: hidden; 
+			backface-visibility: hidden;
+		}
+		.square-flip .square{
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+			-o-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+			z-index:1;
+		}
+		.square-flip:hover .square{
+			-webkit-transform: rotateY(-180deg);
+			-moz-transform: rotateY(-180deg);
+			-o-transform: rotateY(-180deg);
+			-ms-transform: rotateY(-180deg);
+			transform: rotateY(-180deg);
+			transform-style: preserve-3d;
+		}
+
+
+		.square2{
+
+			background-size: cover;
+			background-position:center center;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			overflow: hidden;
+
+			position:absolute;
+			top:0;
+
+			-webkit-backface-visibility: hidden; 
+			backface-visibility: hidden;
+		}
+		.square-flip .square2{
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			-o-transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			transform-style: preserve-3d;
+			z-index:1;
+		}
+		.square-flip:hover .square2{
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+			-o-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+		}
+
+		/*Square content*/
+		.square-container{
+			padding:40px;
+			text-align:center;
+			position:relative;
+			top:50%;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+
+		
+			-webkit-transform: translateY(-50%) translateX(0px)  scale(1);
+			-ms-transform: translateY(-50%) translateX(0px)  scale(1);
+	transform: translateY(-50%) translateX(0px)  scale(1);
+			transform-style: preserve-3d;
+			z-index:2;
+		}
+		.square-flip:hover .square-container{
+			
+			-webkit-transform: translateY(-50%) translateX(-650px)  scale(.88);
+			-ms-transform: translateY(-50%) translateX(-650px)  scale(.88);
+      transform: translateY(-50%) translateX(-650px)  scale(.88);
+			transform-style: preserve-3d;
+
+		}
+
+		.square-container2{
+			padding:40px;
+			text-align:center;
+			position:relative;
+			top:50%;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+
+			
+			-webkit-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+			-ms-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+      transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+
+			transform-style: preserve-3d;
+			z-index:2;
+		}
+		.square-flip:hover .square-container2{
+			
+			-webkit-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+			-ms-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+			transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+      transform-style: preserve-3d;
+		}
+
+
+
+		/*Style text*/
+		.square-flip h2{
+			color:white;
+			font-family: "Open Sans";
+			font-weight:700;
+			font-size:22px;
+		}
+		.square-flip h3{
+			color:white;
+			font-family: "Open Sans";
+			font-weight:500;
+			font-size:16px;
+			line-height:26px;
+		}
+		/*Elements*/
+		.flip-overlay{
+			display:block;
+			background:rgba(0,0,0,0.5);
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0;
+		}
+		.align-center{
+			margin:0 auto;
+		}
+		.kallyas-button{
+			display:block;
+			width:160px;
+			padding:18px 30px;
+			font-family:"Open Sans";
+			font-weight:600;
+			color:#fff;
+			background:#FF2024;
+			margin:0 auto;
+			border-radius:2px;
+			text-decoration:none;
+
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa067+0,ff2959+49,ff2024+100 */
+			background: #ffa067; /* Old browsers */
+			background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(-45deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(135deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa067', endColorstr='#ff2024',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+
+
+		/*ADD SHADOWS OPTIONAL*/
+		.square-flip .square .boxshadow, .square-flip .square .textshadow, .square-flip .square2 .boxshadow, .square-flip .square2 .textshadow{
+			-ms-transition: 0.60s;
+			    transition: 0.60s;
+			    -webkit-transition: 0.60s;
+		}
+
+		.square-flip .square .boxshadow{
+			-webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+		.square-flip .square .textshadow{
+			-webkit-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+		.square-flip:hover .square .boxshadow, .square-flip:hover .square .textshadow{
+			-webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+
+
+		.square-flip .square2 .boxshadow{
+			-webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+		.square-flip .square2 .textshadow{
+			-webkit-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+		.square-flip:hover .square2 .boxshadow, .square-flip:hover .square2 .textshadow{
+			-webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+
+		
+		/*You can delete this style*/
+		.centerflipcards{
+      display:block;
+			width:1330px;
+      height:440px;
+			text-align:center;
+			margin:0 auto;
+			margin-top:25px;
+		}
+.clearfix{clear:both;}
+.centerflipcards p{
+      font-family:"Open Sans";
+      font-size:13px;
+      margin-top:10px;
+      font-weight:700;
+}
+p{
+	color : #fff;
+	font-family: Gill Sans, sans-serif;
+	font-size : 55px;
+
+}
+
+/* Loading */
+
+.load {
+        position: fixed;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+    }
+    .boxLoading {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+}
+.boxLoading:before {
+        content: '';
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.5s linear infinite;
+}
+.boxLoading:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: #1A6844;
+        animation: animate 0.5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px; 
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+</style>
+<body>
+	<div class="load">
+		<div class="boxLoading">
+			</div>
+		</div>
+
+	<div class="mainMenu d-flex align-items-center justify-content-between">
+		<!-- Close Icon -->
+		<div class="closeIcon">
+			<i class="ti-close" aria-hidden="true"></i>
+		</div>
+		<!-- Nav -->
+	</div>
+	  <header class="header-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="menu-area d-flex justify-content-between">
+						<!-- Logo Area  -->
+						<div class="logo-area">
+							<a href="index.html"><p style="font-size:4vh" href="index.html" >World Bamboo Day Museum-Bamboo Species</p></a>
+						</div>
+	
+						<div class="menu-content-area d-flex align-items-center">
+							<!-- Header Social Area -->
+							<div class="header-social-area d-flex align-items-center">
+								<!-- <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							</div>
+							<!-- Menu Icon -->
+							<span class="navbar-toggler-icon" id="menuIcon"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
+		<!-- ***** Main Menu Area Start ***** -->
+		<div class="mainMenu d-flex align-items-center justify-content-between">
+		  <!-- Close Icon -->
+		  <div class="closeIcon">
+			  <i class="ti-close" aria-hidden="true"></i>
+		  </div>
+		  <!-- Logo Area -->
+		  <div class="logo-area">
+			  <a href="index.html">Index</a>
+		  </div>
+		  <!-- Nav -->
+		  <div class="sonarNav">
+			  <nav>
+				  <ul>
+					  <li class="nav-item active">
+						  <a class="nav-link" href="main.html">Home</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="bamboo_classify.html">Bamboo Species</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="WBD.html">World Bamboo Day</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="product.html">Products</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="video.html">Video</a>
+					  </li>
+					  <!-- <li class="nav-item">
+						  <a class="nav-link" href="contact.html">Contact</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="elements.html">Elements</a>
+					  </li> -->
+				  </ul>
+			  </nav>
+		  </div>
+		  <!-- Copwrite Text -->
+		  
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	</p>
+		  </div>
+
+</br></br></br></br></br></br></br>
+	<div class="centerflipcards">
+        <div class="square-flip" id="1">
+            <div class='square' data-image="https://i.imgur.com/gY27Djv.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">Phyllostachys edulis</h2>
+                    <!-- (孟宗竹) -->
+                    <!-- <h3 class="textshadow">Aliases: Phyllostachys pubescens, Jiangnan bamboo, Maotou bamboo, Mahogany bamboo, Mahogany bamboo, Maoru bamboo, Tortoiseshell bamboo</h3> -->
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/gY27Djv.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>#1 the most common species used in the bamboo textile industry of China</h2>                    
+                    <h3 class="textshadow"> a temperate species of giant timber bamboo native to China and Taiwan and naturalised elsewhere, including Japan where it is widely distributed south of Hokkaido.The edulis part of the Latin name refers to its edible shoots. This bamboo can reach heights of up to 28 m (92 ft)</h3>
+                    <a href="http://www.bamboobotanicals.ca/html/bamboo-species/phyllostachys-edulis-moso.html" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+        <div class="square-flip" id="2">
+            <div class='square' data-image="https://i.imgur.com/nJiUzsl.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">Bambusa bambos</h2>
+                    <!-- (刺竹) -->
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/nJiUzsl.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>mainly for making bridges and for ladders. Leaves are used for thatching</h2>                    
+                    <h3 class="textshadow"> It is a tall, bright-green colored spiny bamboo species, which grows in thickets consisting of a large number of heavily branched, closely growing culms. It reaches a height of 10–35 m and grows naturally in the forests of the dry zones.</h3>
+                    <a href="https://www.guaduabamboo.com/blog/bambusa-bambos" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+        <div class="square-flip" id="3">
+            <div class='square' data-image="https://i.imgur.com/9ONzPFV.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">Bambusa dolichoclada Hayata</h2>
+                    <!-- (長枝竹) -->
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/9ONzPFV.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>used for building and manufacturing furniture, craft materials, paper making...</h2>                    
+                    <h3 class="textshadow">The bamboo is tall and messy, with small leaves, and the internode length, diameter, and stem height are between "green bamboo" and "ma bamboo". It is a clump bamboo. Born in the tropics, they look like clusters, because their rhizomes are short and thick, and new bamboos grow from the side buds of the culm rhizomes of old bamboos, so they all seem to gather together.</h3>
+                    <a href="https://npgis.cpami.gov.tw/public/detail/SpeciesDetail.aspx?SP_ID=201419" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+		</div>
+		
+        <div class="square-flip" id="4">
+            <div class='square' data-image="https://i.imgur.com/UJ30BXS.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">Bambusa oldhamii Munro</h2>
+                    <!-- (綠竹) -->
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/UJ30BXS.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>Bamboo shoots are delicious , and are excellent vegetables in spring and autumn. After being canned, it is exported to various countries</h2>                    
+                    <h3 class="textshadow">grows to 17–20 m (56–66 ft) in height, with green culms reaching a maximum of 10 cm (4 in) in diameter.Shoots grow rapidly in warmer months. The branches are short and leaves long</h3>
+                    <a href="https://en.wikipedia.org/wiki/Bambusa_oldhamii" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+        <div class="square-flip" id="5">
+            <div class='square' data-image="https://i.imgur.com/VBzl323.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">Makino Bamboo</h2>
+                    <!-- (桂竹) -->
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/VBzl323.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>In the use of building materials and ediable</h2>                    
+                    <h3 class="textshadow">The pole height can reach 16m, the diameter is 2~10cm, the internode length is 12~40cm, the young pole is pink-green, later it becomes dark green, and the old one becomes brown-green.Bamboo sheath light brown with dark brown spots, sparse hair outside, no green hair</h3>
+                    <a href="https://davesgarden.com/guides/pf/go/122127/#b" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+        <div class="square-flip" id="6">
+            <div class='square' data-image="https://i.imgur.com/wuvDtsr.jpg">
+                <div class="square-container">
+                    <div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas2.png" class="boxshadow" alt=""></div>
+                    <h2 class="textshadow">‎Ma Bamboo</h2>
+					<!-- (麻竹) -->
+					
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2' data-image="https://i.imgur.com/wuvDtsr.jpg">
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <h2>Young shoots are edible either raw or cooked. Mature culms are used as water pipes</h2>                    
+                    <h3 class="textshadow">Ma bamboo shoot is also called sweet bamboo or big leaf black bamboo (da-ye-wu-zhu), the biggest variety of edible bamboo shoot in Taiwan, and it also has the highest yield among the varieties</h3>
+                    <a href="https://pfaf.org/user/Plant.aspx?LatinName=Dendrocalamus+latiflorus" target="_blank" class="boxshadow kallyas-button">intro</a>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+        </div>
+      <div class="clearfix"></div>
+      
+      <br/>
+      <br/>
+      <br/>
+      
+    </div>
+    
+   
+
+</body>
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="js/plugins.js"></script>
+<!-- Active js -->
+<script src="js/active.js"></script>
+
+
+
+<!-- <script src="first.js"></script> -->
+<script>
+    jQuery(document).ready(function($) {
+
+//Count nr. of square classes
+var countSquare = $('.square').length;
+
+//For each Square found add BG image
+for (i = 0; i < countSquare; i++) {
+  var firstImage = $('.square').eq([i]);
+  var secondImage = $('.square2').eq([i]);
+
+  var getImage = firstImage.attr('data-image');
+  var getImage2 = secondImage.attr('data-image');
+
+  firstImage.css('background-image', 'url(' + getImage + ')');
+  secondImage.css('background-image', 'url(' + getImage2 + ')');
+}
+
+});
+
+</script>
+
+
+
+
+
+
+</html>

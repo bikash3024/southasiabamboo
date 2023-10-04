@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+        <title>Door</title>
+        
+</head>
+<style>
+        .body{ background-color: black;}
+.backDoor
+{
+  background-color: rgb(170,170,170); 
+  background-image:url(https://g.udn.com.tw/upfiles/B_AA/AAC3343/PSN_PHOTO/573/f_23823573_1.jpg);
+  position: absolute;;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:126px;
+  height:270px; 
+  margin: 0 auto;
+  margin-top:50px;
+  left: 40%;
+  bottom:24.5%;
+}
+
+.door
+{
+  background-color: white;
+  background-image: url(https://i.imgur.com/Zw1vBVF.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:126px;
+  height:270px;
+ 
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+.doorClosed{
+    transform: perspective(1200px) translateZ(0px) translate(0px) translateY(0px) rotateY(50deg);
+}
+
+</style>
+<body >
+        <div class="backDoor"><a href="https://www.ec.ccu.edu.tw/ec/index.php?lang=zh"></a>
+                <div class="door">                
+                </div>
+        </div>
+        
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script></script>
+<script >
+        var element = document.querySelector(".door");
+cnt=0;
+element.addEventListener("click", toggleDoor);
+
+function toggleDoor() {
+
+        element.classList.toggle("doorOpen");
+
+        // setTimeout(function(){
+        //     window.location.href = "https://www.ccu.edu.tw/";
+        // }, 1000); 
+        
+}
+</script>
+</html>

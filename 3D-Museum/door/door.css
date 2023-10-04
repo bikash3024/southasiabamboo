@@ -1,0 +1,62 @@
+.body{ background-color: black;}
+.backDoor
+{
+  background-color: rgb(170,170,170); 
+  background-image:url(https://g.udn.com.tw/upfiles/B_AA/AAC3343/PSN_PHOTO/573/f_23823573_1.jpg);
+  position: absolute;;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:84px;
+  height:180px; 
+  margin: 0 auto;
+  margin-top:50px;
+  left: 40%;
+  bottom:24.5%;
+}
+
+.door
+{
+  background-color: white;
+  background-image: url(https://i.imgur.com/92FybDu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:84px;
+  height:180px;
+ 
+  transform-origin: right;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-in-out;
+}
+.door1
+{
+  background-color: white;
+  background-image: url(https://i.imgur.com/4s2WPYc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:absolute;
+  bottom:177px;
+  left:530px;
+  width:84px;
+  height:180px;
+ 
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
+}
+.doorOpenleft
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+.doorClosed{
+    transform: perspective(1200px) translateZ(0px) translate(0px) translateY(0px) rotateY(50deg);
+}

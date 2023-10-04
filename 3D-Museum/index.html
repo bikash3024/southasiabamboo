@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+  <title>World Bamboo Day Museum</title>
+  <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A set of modern text styles and hover effects for your inspiration" />
+	<meta name="keywords" content="text style, link style, link hover, effect, animation, inspiration, web design" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="img/logo-image.jpg">
+	<link rel="stylesheet" type="text/css" href="TextStylesHoverEffects/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="TextStylesHoverEffects/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="TextStylesHoverEffects/css/linkstyles.css" />
+
+</head>
+<style>
+  .link--urpi::before {
+			-webkit-clip-path: url(#cp_up); 
+			clip-path: url(#cp_up);
+		}
+
+		.link--urpi::after {
+			-webkit-clip-path: url(#cp_down); 
+      clip-path: url(#cp_down);
+    }
+    body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #2e2d31;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-3d {
+  position: relative;
+  perspective: 250px;
+  transform-style: preserve-3d;
+}
+
+.image {
+  height: 175px;
+  width: 300px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 60vw;
+  height: 80vh;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-out;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* The trick is to position them on their respective side
+   Then set transform-origin to that siede
+   And put desired angle 
+*/
+.left-3d {
+  position: absolute;
+  transform-origin: right center;
+  transform: rotateY(100deg);
+  top: 0;
+  bottom: 0;
+  right: calc(100%);
+}
+
+#left {
+  transform: translateX(0%);
+}
+
+#center {
+  transform: translateX(-100%);
+}
+
+.right-3d {
+  position: absolute;
+  transform-origin: left center;
+  transform: rotateY(-100deg);
+  top: 0;
+  bottom: 0;
+  left: calc(100%);
+}
+
+#right {
+  transform: translateX(-200%);
+}
+
+.first, .second, .third {
+  background-size: cover;
+}
+
+.first {
+  background-image: url("https://i.imgur.com/kksKxZe.jpg");
+}
+
+.second {
+  background-image: url("https://i.imgur.com/sLP27id.jpg");
+  background-position-y: 50%;
+}
+
+.third {
+  background-image: url("https://i.imgur.com/GQVNsSx.jpg");
+  background-position-y: 50%;
+}
+
+.debug {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 1.10em;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 10px;
+  color: #fafafaee;
+}
+.debug-top {
+  top: 2vh;
+}
+.debug-bot {
+  bottom: 2vh;
+}
+
+.fa {
+  font-size: 15rem;
+  color: #fafafa99;
+  line-height: 20px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .right-3d {
+    transform: none;
+    transform: rotateY(-120deg);
+  }
+
+  .left-3d {
+    transform: none;
+    transform: rotateY(120deg);
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+a {
+  color: blue;
+  font: bold 3em/1.5 'Fjalla One', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* -webkit-transition: .2s; */
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+  a {
+    background-color: rgb(7, 237, 245);
+    background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  a:hover {
+    /* font-weight:bold;
+    font-size: 50px; */
+    background-position: 0 0; 
+    /* color: transparent; */
+    transition: .4s 0;
+  }
+}
+</style>
+<body>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 22%;bottom:32%;"  href="bamboo_classify.html"><span data-letters-l="Bam" data-letters-r="boo">Bamboo</span></a>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 22%;bottom:27%;"  href="bamboo_classify.html"><span data-letters-l="Spec" data-letters-r="ies">Species</span></a>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 37%;bottom:32%;" href="WBD.html"><span data-letters-l="Wor" data-letters-r="ld">World</span></a>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 36%;bottom:27%;" href="WBD.html"><span data-letters-l="Bam" data-letters-r="boo">Bamboo</span></a>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 39%;bottom:22%;" href="WBD.html"><span data-letters-l="Da" data-letters-r="y">Day</span></a>
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 50%;bottom:28%;"  href="product.html"><span data-letters-l="Prod" data-letters-r="ucts">Products</span></a>
+  <!-- <a class="link link--kumya" href="#" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 49%;bottom:28%;"><span data-letters="Kumya">Kumya</span></a> -->
+  <a class="link link--surinami" style="text-align:center;z-index: 999;font-size:5vh;position:absolute;left: 67%;bottom:28%;" href="video.html"><span data-letters-l="Vi" data-letters-r="deo">Video</span></a>
+  <a class="link link--yaku" href="index.html" style="text-align:left;z-index: 999;font-size:10vh ;position:absolute;left: 38%;top:2%;">
+    <span>B</span><span>a</span><span>m</span><span>b</span><span>o</span><span>o</span>
+    </br>
+    <span>M</span><span>u</span><span>s</span><span>e</span><span>u</span><span>m</span>
+  </a>
+  
+    <div class='wrapper' id='wrapper'>
+        <div class='wrapper-3d'>
+          <div class='carousel-wrapper center-3d'>
+            <div class='carousel-container' id='center'>
+              <div class='slide first'></div>
+              <div class='slide second'></div>
+              <div class='slide third'></div>
+            </div>
+            <div class='first image' id='img'></div>
+          </div>
+          <div class='carousel-wrapper left-3d center-3d'>
+            <div class='carousel-container' id='left'>
+              <div class='slide first'></div>
+              <div class='slide second'></div>
+              <div class='slide third'></div>
+            </div>
+          </div>
+          <div class='carousel-wrapper right-3d center-3d'>
+            <div class='carousel-container' id='right'>
+              <div class='slide first'></div>
+              <div class='slide second'></div>
+              <div class='slide third'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <p class='debug debug-top' id='t'>0</p> -->
+      <!-- <p class='debug debug-bot'>
+        <br/>
+         Move your mouse horizontally
+      </p> -->
+
+
+      <a href="bamboo_classify.html"><img style="position:absolute;top:37%;left:22%; width:10%; height: auto;" src="https://i.imgur.com/1Ty19Ek.png" alt="Bamboo"></a>
+      <a href="WBD.html"><img style="height: 218px;width: 240px;position:absolute;top:35%;left:35%; width:13%; height: auto;" src="https://i.imgur.com/SJdc4aY.png" alt="WBD"></a>
+      <a href="product.html"><img style="height: 250px;width: 250px;position:absolute;top:35%;left:49%; width:13%; height: auto;" src="https://i.imgur.com/TCA1nWy.png" alt="Chair"></a>
+      <a href="video.html"><img style="height: 160px;width: 160px;position:absolute;top:37%;left:65%; width:10%; height: auto;" src="https://i.imgur.com/U9g84kU.png" alt="camera"></a>
+
+      <!-- door1 -->
+      <!-- <div class="backDoor" ><a href="https://www.ec.ccu.edu.tw/ec/index.php?lang=zh"></a>
+        <div  class="door door1" position="absolute" style="top: 0px; left:-300px;">                
+        </div>
+      </div> -->
+      <!-- door2 -->
+      <!-- <div class="backDoor"><a href="https://www.ec.ccu.edu.tw/ec/index.php?lang=zh"></a>
+        <div  class="door door2" position="absolute" style="top: 0px; left:0px;">                
+        </div>
+      </div> -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    const padding = 200;
+    const slidesCount = 3 - 1;
+    function map(x, in_min, in_max, out_min, out_max)
+    {
+        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+    document.addEventListener('mousemove', (e)=>{
+  // Change to bodywidth
+  const wrapper = document.getElementById('wrapper')
+  const rect = wrapper.getBoundingClientRect();
+  // Mouse position in between padding
+  const mouseX = Math.min(Math.max(e.clientX - padding,0),rect.width - padding * 2);
+  const rawPercent = map(mouseX, 0, rect.width - padding * 2, 100 - 100 * slidesCount, 100);
+  const percent = Math.round(rawPercent)
+  const left = document.getElementById('left');
+  const center = document.getElementById('center');
+  const right = document.getElementById('right');
+  left.style.transform = `translateX(${percent}%)`;
+  center.style.transform = `translateX(${percent - 100}%)`;
+  right.style.transform = `translateX(${percent - 200}%)`;
+  //debug
+  const paragraph = document.getElementById('t');
+  paragraph.innerHTML = percent;
+});
+
+
+</script>
+<script>
+  window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+  })();
+
+  var requestId, jolttime;
+
+  var c = document.getElementById('canv');
+  var $ = c.getContext('2d');
+
+  var s = 18; //grid square size
+  var mv = 10; //moving areas
+  var sp = 1; //move speed
+  var clm = 23; //columns
+  var rw = 10; //rows
+  var x = []; //x array
+  var y = []; //y array
+  var X = []; //starting X array
+  var Y = []; //starting Y array
+
+  c.width  = c.offsetWidth;
+  c.height = c.offsetHeight;
+
+  for (var i = 0; i < clm * rw; i++) {
+    x[i] = ((i % clm) - 0.5) * s;
+    y[i] = (Math.floor(i / clm) - 0.5) * s;
+    X[i] = x[i];
+    Y[i] = y[i];
+  }
+  var t = 0;
+
+  function jolt() {
+    $.fillRect(0, 0, c.width, c.height);
+
+    for (var i = 0; i < clm * rw; i++) {
+      if (i % clm != clm - 1 && i < clm * (rw - 1) - 1) {
+        $.fillStyle = "hsla(0,0,0,1)";
+        $.strokeStyle = "#95D384";
+        $.lineWidth = 1;
+        $.beginPath();
+        $.moveTo(x[i], y[i]);
+        $.lineTo(x[i + 1], y[i + 1]);
+        $.lineTo(x[i + clm + 1], y[i + clm + 1]);
+        $.lineTo(x[i + clm], y[i + clm]);
+        $.closePath();
+        $.stroke();
+        $.fill();
+      }
+    }
+    for (var i = 0; i < rw * clm; i++) {
+      if ((x[i] < X[i] + mv) && (x[i] > X[i] - mv) && (y[i] < Y[i] + mv) && (y[i] > Y[i] - mv)) {
+        x[i] = x[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+        y[i] = y[i] + Math.floor(Math.random() * (sp * 2 + 1)) - sp;
+      } else if (x[i] >= X[i] + mv) {
+        x[i] = x[i] - sp;
+      } else if (x[i] <= X[i] - mv) {
+        x[i] = x[i] + sp;
+      } else if (y[i] >= Y[i] + mv) {
+        y[i] = y[i] - sp;
+      } else if (y[i] <= Y[i] + mv) {
+        y[i] = y[i] + sp;
+      }
+    }
+    //controls time of electric shake> when counter equals 0, it will reset for 5s then start again.
+    if (t % c.width == 0) {
+      jolttime = setTimeout('jolt()', 5);
+      t++;
+    } else {
+      jolttime = setTimeout('jolt()', 5);
+      t++;
+    }
+  }
+
+  function start() {
+    if (!requestId) {
+      requestId = window.requestAnimFrame(jolt);
+    }
+  }
+
+  function stop() {
+    if (requestId) {
+      clearTimeout(jolttime);
+      window.cancelAnimationFrame(requestId);
+      requestId = undefined;
+    }
+  }
+
+  document.querySelector('a.link--asiri').addEventListener('mouseenter', start);
+  document.querySelector('a.link--asiri').addEventListener('mouseleave', stop);
+</script>
+<script>
+  // For Demo purposes only (show hover effect on mobile devices)
+  [].slice.call( document.querySelectorAll('.grid a') ).forEach( function(el) {
+    el.onclick = function() { return false; }
+  } );
+</script>
+</html>

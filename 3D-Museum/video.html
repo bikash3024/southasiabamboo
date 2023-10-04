@@ -1,0 +1,525 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	<link rel="shortcut icon" href="img/logo-image.jpg">
+  <title>South Asia Bamboo Foundation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="Video/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="Video/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="Video/css/grayscale.css?ver=202003051040" rel="stylesheet">
+  
+  <!--swip-->
+  <link href="Video/css/swiper.min.css" rel="stylesheet">
+  <link rel=stylesheet type="text/css" href="Video/word.css">
+
+</head>
+<script>
+
+  window.onload = function () {
+      $(".load").fadeOut(2000);
+  };
+</script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  /* for touch screen */
+  touch-action: none; 
+}
+
+body {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgb(3, 37, 24);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#drag-container, #spin-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-10deg);
+          transform: rotateX(-10deg);
+}
+
+#drag-container img, #drag-container video, #test123,#door{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 8px #fff;
+          box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+  background-color: black;
+}
+
+/* #test123 {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 8px #fff;
+          box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+} */
+
+
+
+
+#drag-container img:hover, #drag-container video:hover {
+  -webkit-box-shadow: 0 0 15px #fffd;
+          box-shadow: 0 0 15px #fffd;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+#drag-container p {
+  font-family: Serif;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+          transform: translate(-50%,-50%) rotateX(90deg);
+  color: #fff;
+}
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+          transform: translate(-50%,-50%) rotateX(90deg);
+  background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+}
+
+#music-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes spin {
+  from{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  } to{
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  from{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  } to{
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes spinRevert {
+  from{
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  } to{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+@keyframes spinRevert {
+  from{
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  } to{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+.btn {
+  display: block;
+  position: absolute;
+  border-radius: 20px;
+  width: 120px;
+  height: 60px;
+  -webkit-transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1), height 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1), height 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1), height 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1), height 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-align: top;
+}
+
+.btn-front {
+  position: absolute;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  font-size:14;
+  background-color: #0c5364;
+  color: #fff;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background 0.15s ease, line-height 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: background 0.15s ease, line-height 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-front:hover {
+  background-color: #f77066;
+}
+iframe{
+    transition: transform 1s ease 0.5s;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
+    color: #212529;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    background-color: black;
+}
+/* Loading */
+
+ .load {
+        position: fixed;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+    }
+    .boxLoading {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+}
+.boxLoading:before {
+        content: '';
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.5s linear infinite;
+}
+.boxLoading:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: #1A6844;
+        animation: animate 0.5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px; 
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+
+</style>
+<body>
+  <div class="load">
+		<div class="boxLoading">
+			</div>
+		</div>
+</div>
+  <div class="btn">
+    <div  onclick="location.href='index.html'" class="btn-front">Main Page</div>
+  </div>
+  
+  <div id="word">
+    <a  style="text-decoration: none;" href="http://www.wibibi.com"  target="_blank"><h1 id="title" data-text="Bamboo">Bamboo</h1></a>
+  </div>
+  
+<div id="SLCSS">
+</div>
+
+	<div id="drag-container">
+  <div id="spin-container">
+    <!-- Add your images (or video) here -->
+  <!-- <iframe src="https://www.youtube.com/embed/qx0SOVKt3rs?autoplay=1&mute=1"  frameborder="0" allowfullscreen="allowfullscreen"  style="background-color:#c0afff;"></iframe>
+  <iframe src="https://www.youtube.com/embed/Ljnma8gWZc4?autoplay=1&mute=1"  frameborder="0" allowfullscreen="allowfullscreen"  style="background-color:#c0afff;"></iframe>
+  <iframe src="https://www.youtube.com/embed/tuGAwEN2TxE?autoplay=0&loop=0&controls=1&start=100&end=600&rel=1" frameborder="0" allowfullscreen></iframe> -->
+    <!-- <img src="images/about01.jpg" alt=""> -->
+
+    
+    <video  id="myvideo"  controls autoplay="autoplay" muted="muted" loop>
+      <source src="Video/v2.mp4" type="video/mp4">
+       <p>bamboo2</p>
+    </video>
+    <video controls autoplay="autoplay" muted="muted" loop>
+      <source src="Video/v1.mp4" type="video/mp4">
+      <p>bamboo1</p>
+    </video>
+    <video controls autoplay="autoplay" muted="muted" loop>
+      <source src="Video/sofa.mp4" type="video/mp4">
+        <p>Bamboo 4</p>
+    </video>
+    <video controls autoplay="autoplay" muted="muted" loop>
+      <source src="Video/v3.mp4" type="video/mp4">
+      <p>bamboo3</p>
+    </video>
+    
+    <!-- Text at center of ground -->
+    <p>SAbF</p> 
+	</div>
+  <div id="ground"></div>
+</div>
+
+
+<a href="../index.html" target="_blank" class="github-corner" aria-label="View source on GitHub">
+
+
+</a>
+<style>
+.github-corner:hover .octo-arm{
+animation:octocat-wave 560ms ease-in-out
+}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+</body>
+ <script>
+
+
+function autoPlay() {
+            var myAuto = document.getElementById('myaudio');
+            myAuto.play();
+   }
+function closePlay() {
+            var myAuto = document.getElementById('myaudio');
+            myAuto.pause();
+            myAuto.load();
+        }
+
+// You can change global variables here:
+var radius = 480; // how big of the radius
+var autoRotate = true; // auto rotate or not
+var rotateSpeed = -60; // unit: seconds/360 degrees
+var imgWidth =320; // width of images (unit: px)
+var imgHeight = 300; // height of images (unit: px)
+
+// Link of background music - set 'null' if you dont want to play background music
+var bgMusicURL = 'images/Jarico - Island (Vlog No Copyright Music).mp3';
+var bgMusicControls = true; // Show UI music control
+
+
+// ===================== start =======================
+// animation start after 1000 miliseconds
+setTimeout(init, 1000);
+
+var odrag = document.getElementById('drag-container');
+var ospin = document.getElementById('spin-container');
+var aImg = ospin.getElementsByTagName('img');
+var aVid = ospin.getElementsByTagName('video');
+var frame = ospin.getElementsByTagName('iframe');
+var aVtext = ospin.getElementsByTagName('div');
+var aEle = [...aImg, ...aVid, ...aVtext ,...frame]; // combine 2 arrays
+
+// Size of images
+ospin.style.width = imgWidth + "px";
+ospin.style.height = imgHeight + "px";
+
+// Size of ground - depend on radius
+var ground = document.getElementById('ground');
+ground.style.width = radius * 3 + "px";
+ground.style.height = radius * 3 + "px";
+
+function init(delayTime) {
+  for (var i = 0; i < aEle.length; i++) {
+    aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+    aEle[i].style.transition = "transform 1s";
+    aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+  }
+}
+
+function applyTranform(obj) {
+  // Constrain the angle of camera (between 0 and 180)
+  if(tY > 180) tY = 180;
+  if(tY < 0) tY = 0;
+
+  // Apply the angle
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+}
+
+function playSpin(yes) {
+  ospin.style.animationPlayState = (yes?'running':'paused');
+}
+
+var sX, sY, nX, nY, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10;
+
+// auto spin
+if (autoRotate) {
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+}
+
+// add background music
+/*
+if (bgMusicURL) {
+  document.getElementById('music-container').innerHTML += `
+<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop >    
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+`;
+}
+*/
+// setup events
+document.onpointerdown = function (e) {
+  clearInterval(odrag.timer);
+  e = e || window.event;
+  var sX = e.clientX,
+      sY = e.clientY;
+
+  this.onpointermove = function (e) {
+    e = e || window.event;
+    var nX = e.clientX,
+        nY = e.clientY;
+    desX = nX - sX;
+    desY = nY - sY;
+    tX += desX * 0.1;
+    tY += desY * 0.1;
+    applyTranform(odrag);
+    sX = nX;
+    sY = nY;
+  };
+
+  this.onpointerup = function (e) {
+    odrag.timer = setInterval(function () {
+      desX *= 0.95;
+      desY *= 0.95;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      applyTranform(odrag);
+      playSpin(false);
+      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+        clearInterval(odrag.timer);
+        playSpin(true);
+      }
+    }, 17);
+    this.onpointermove = this.onpointerup = null;
+  };
+
+  return false;
+};
+
+document.onmousewheel = function(e) {
+  e = e || window.event;
+  var d = e.wheelDelta / 20 || -e.detail;
+  radius += d;
+  init(1);
+};
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+<script>
+  
+  $( "video" ).hover(
+    function() {
+      
+       var index = $( "video" ).index(this);
+       index=index.toString();
+       str="video:eq("+index+")"
+      $("#title").text($( str ).text());
+      $("#title").attr("data-text",$( str ).text())
+    }
+    , function(){
+      $("#title").text("Bamboo");
+      $("#title").attr("data-text","Bamboo")
+    }
+  );
+  // console.log($( "img:eq(2)" ).attr("alt"))
+  $('.video').click(function(){this.paused?this.play():this.pause();});
+</script>
+
+</html>

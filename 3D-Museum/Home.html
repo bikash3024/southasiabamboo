@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+        <title>World Bamboo Day Museum Entrance</title>
+        <link rel=stylesheet type="text/css" href="main-page/walk.css">
+        <link rel=stylesheet type="text/css" href="main-page/door.css">
+        <link rel=stylesheet style="border-style:solid" type="text/css" href="main-page/arrow.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <link rel="shortcut icon" href="img/logo-image.jpg">
+		<meta property="og:title" content="World Bamboo Day Museum Entrance" >
+
+</head>
+<script>
+
+    window.onload = function () {
+        $(".load").fadeOut(2000);
+    };
+</script>
+<style>
+ 
+    body { 
+        background: url("https://i.imgur.com/0HYVEw4.jpg") no-repeat center center fixed; 
+        background-attachment: scroll;
+        background-size:100% 120%;
+     
+    }  
+     .arrow {
+    position: absolute;
+    /* margin: 1.5% -8%; */
+    left: 42%;
+    bottom:42%;
+    
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .cube {
+        position: absolute;
+       /*  width: 100px;
+        height: 100px;
+        background: #41D2F2;
+        background-image: url("img/Museum/wan.gif");
+        background-position: center; */
+        /* transition: transform 1s;
+        left: 22%;bottom: 10%; */
+        animation-name:ppl;
+        animation-duration:5s;
+        animation-fill-mode: forwards;
+    }
+    /* Loading */
+    .load {
+        position: fixed;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 100vh;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+    }
+    .boxLoading {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+}
+.boxLoading:before {
+        content: '';
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.5s linear infinite;
+}
+.boxLoading:after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: #1A6844;
+        animation: animate 0.5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px; 
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+/* Loading */
+  
+    @keyframes ppl{
+        from{
+            bottom:5%;
+            left:15%;
+        }
+        to{
+            bottom:23%;
+            left:37%;
+        }
+    }
+    
+    
+
+</style>
+<body>
+    <div class="load">
+    <div class="boxLoading">
+        </div>
+    </div>
+  
+    <!-- <div class="container"> -->
+    <div class="cube">
+    <div class="human">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="arm left">
+          <div class="limb upper"></div>
+          <div class="limb lower"></div>
+        </div>
+        <div class="arm right">
+          <div class="limb upper"></div>
+          <div class="limb lower"></div>
+        </div>
+        <div class="leg left">
+          <div class="limb upper"></div>
+          <div class="limb lower">
+            <div class="limb foot"></div>
+          </div>
+        </div>
+        <div class="leg right">
+          <div class="limb upper"></div>
+          <div class="limb lower">
+            <div class="limb foot"></div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="backDoor">
+        <div class="door">                
+        </div>
+    </div>
+    <div class="arrow bounce" style="display: none;">
+     <!-- <a class= "fa fa-hand-o-down fa-3x" ></a> -->
+      
+      <a class= "fa fa-map-marker fa-3x" aria-hidden="true"></a>
+    </div>
+    <!-- <p style="border-style:solid">實線</p> -->
+
+
+</body>
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js"></script>
+<script src="main-page/door.js"></script>
+
+<script>
+ 
+  $( document ).ready(function() {
+    setTimeout(function(){
+    $('.arrow').css('display','block')
+    ;  } , $('.arrow'). fadeToggle(3500) );
+});
+
+
+</script>
+
+</html>

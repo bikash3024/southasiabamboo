@@ -1,0 +1,27 @@
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  text-align: center;
+    background-color: #136E83;
+    padding-bottom: 200px;
+}
+
+.jR3DCarouselGalleryDefault,
+.jR3DCarouselGalleryCustom {
+  margin: 0 auto;
+}
+
+.jR3DCarouselGalleryCustom .captions {
+  position: relative;
+  padding: 5px 0;
+  bottom: 4px;
+  color: white;
+  background: #000;
+}
+
+hr { 
+ display: none;
+}
+  

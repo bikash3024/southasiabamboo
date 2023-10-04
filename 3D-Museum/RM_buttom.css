@@ -1,0 +1,35 @@
+@import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';
+
+button {
+  color:#454545;
+  background:transparent;
+  border-width:2px;
+  border-style: solid;
+  border-color: #454545;
+  position:relative;
+  margin-bottom:-30em;
+  margin-left: 15em;
+  display:inline-block;
+  padding:0.5em 1em;
+  transition:all 0.3s ease-in-out;
+  text-align:center;
+  font-family:comfortaa;
+  font-weight:bold
+}
+
+button:before, button:after {content:'';display:block;position:absolute;border-color:#454545;box-sizing:border-box;border-style:solid;width:1em;height:1em;transition:all 0.3s ease-in-out}
+button:before {top:-6px;left:-6px;border-width:2px 0 0 2px;z-index:5;}
+button:after {bottom:-6px;right:-6px;border-width:0 2px 2px 0;}
+button:hover:before, button:hover:after {width:calc(100% + 12px);
+  height:calc(100% + 12px);border-color:#fff}
+button:hover {color:#188d01;background-color:#fff;border-color:#fff}
+.panel {max-width:960px;text-align:center;position:relative;margin:auto;}
+
+.bw button {color:#fff;border-color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.1);
+box-shadow:0 1px 3px rgba(3, 134, 9, 0.1), 0 1px 3px rgba(0,0,0,0.1) inset
+}
+.bw button:before, .bw button:after  {border-color:#fff}
+.bw button:hover:before, .bw button:hover:after {width:calc(100% + 12px);
+  height:calc(100% + 12px);border-color:#fff;}
+.bw button:hover {color:#fff;background-color:#127206;border-color:#127206}
+.blue .panel {max-width:960px;text-align:center;position:relative;margin:auto;}

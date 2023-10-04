@@ -1,0 +1,22 @@
+
+*{margin:0;padding:0}
+body{text-align:center;background-image:url( '../images/earth02.jpg' );background-color: #1C1C1C;background-size:contain;background-repeat: no-repeat;background-position: center center;}
+img{border:none}
+.leftcurtain{width:50%;height:100%;top:0px;left:0px;position:fixed;z-index:21}
+.rightcurtain{width:51%;height:100%;right:0px;top:0px;position:fixed;z-index:22}
+
+
+.bottcurtain1{left:10%;bottom: 20px;position:fixed;z-index:23;}
+.bottcurtain2{left:30%;bottom: 20px;position:fixed;z-index:23;}
+.bottcurtain3{left:50%;bottom: 20px;position:fixed;z-index:23;}
+.bottcurtain4{left:70%;bottom: 20px;position:fixed;z-index:23;}
+.bottcurtain5{left:90%;bottom: 20px;position:fixed;z-index:23;}
+
+.rightcurtain img,.leftcurtain img{width:100%;height:100%}
+.logo{margin:0px auto;margin-top:150px}
+.rope1{position:fixed;top:-40px;left:10%;z-index:30}
+.rope2{position:fixed;top:-40px;left:30%;z-index:30}
+.rope3{position:fixed;top:-40px;left:50%;z-index:30}
+.rope4{position:fixed;top:-40px;left:70%;z-index:30}
+.rope5{position:fixed;top:-40px;left:90%;z-index:30}
+
